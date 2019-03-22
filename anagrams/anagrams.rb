@@ -1,6 +1,9 @@
 require 'byebug'
 
 #factorial
+time: n! (num per perms) * n (.map)
+space: n! (count arrays)
+space: n! * n (count el)
 def first_anagram?(word1, word2)
   letters = word1.split("")
 
@@ -17,7 +20,7 @@ def first_anagram?(word1, word2)
 
 end
 
-
+#possibly n (slice! (?))
 def second_anagram?(word1, word2)
   word1.each_char do |char|
     index = word2.index(char)
@@ -32,6 +35,7 @@ def second_anagram?(word1, word2)
 
 end
 
+#time complexity of sort
 def third_anagram?(word1, word2)
 
   word1_arr = word1.split("")
@@ -41,6 +45,7 @@ def third_anagram?(word1, word2)
 
 end
 
+# 3n => n
 def fourth_anagram?(word1, word2)
   hash = Hash.new(0)
   
